@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CRUD — Main Page</title>
+  <link rel="stylesheet" href="main-page-style.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Simple CRUD</h1>
+
+    <section id="form-section">
+      <h2>Добавить / Редактировать запись</h2>
+      <form id="item-form">
+        <input type="hidden" id="item-id" />
+        <div class="field">
+          <label for="title">Заголовок</label>
+          <input id="title" required />
+        </div>
+        <div class="field">
+          <label for="content">Содержимое</label>
+          <textarea id="content" rows="4" required></textarea>
+        </div>
+        <div class="actions">
+          <button id="save-btn" type="submit">Сохранить</button>
+          <button id="reset-btn" type="button">Очистить</button>
+        </div>
+      </form>
+    </section>
+
+    <section id="list-section">
+      <h2>Список записей</h2>
+      <ul id="items-list"></ul>
+    </section>
+  </main>
+
+  <script src="main-page-script.js" defer></script>
+</body>
+</html>
